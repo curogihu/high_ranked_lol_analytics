@@ -1,0 +1,41 @@
+テーブル構成
+
+
+Summoner
+summonerId, summonerName, summonerAccountId
+
+GameTeamInfo
+gameId, teamColorId, win or lose, elapsedSeconds, matchDate
+
+
+GamePlayerInfo
+gameId, summonerAccountId, participaintId, colorId, championId
+
+TeamColor
+teamColorId, color
+
+
+PurchaseHistory
+gameId, participantId, itemId, buyDate
+
+Champion
+championKey, championId, championName
+
+Item
+itemId, itemName, imageDescription, price, sell
+
+FromItem (派生元アイテム）
+itemId fromItemId
+
+ToItem　(派生先アイテム)
+itemId, toItemId
+
+php artisan make:model Summoner -mfsc
+php artisan make:model GameTeamInfo -mfsc
+php artisan make:model GamePlayerInfo -mfsc
+php artisan make:model TeamColor -mfsc
+php artisan make:model PurchaseHistory -mfsc
+php artisan make:model Champion -mfsc
+php artisan make:model Item -mfsc
+php artisan make:model FromItem -mfsc
+php artisan make:model ToItem -mfsc
