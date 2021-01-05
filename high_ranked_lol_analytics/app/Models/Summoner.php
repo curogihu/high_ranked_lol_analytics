@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Summoner extends Model
 {
     use HasFactory;
+
+    public $timestamps = false;
 }
